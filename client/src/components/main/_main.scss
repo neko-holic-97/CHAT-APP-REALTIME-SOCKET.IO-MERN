@@ -1,0 +1,155 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .sidebarWrapper {
+    flex: 0.25;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    .top {
+      top: 20px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-between;
+
+      .imageName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image {
+          height: 40px;
+          width: 40px;
+
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .name {
+          margin-left: 10px;
+        }
+      }
+
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .icon {
+          margin-left: 10px;
+          cursor: pointer;
+          color: #fff;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .sidebarHr {
+      margin: 20px 0;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      padding: 20px 15px;
+      margin: 0;
+      width: 100%;
+      height: 30px;
+      border-radius: 50px;
+      background-color: #2d2e4259;
+
+      button {
+        padding-right: 15px;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      input {
+        flex: 1;
+        width: 100%;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
+        border: none;
+        background: transparent;
+        color: rgb(220, 220, 220);
+        padding: 0;
+
+        &::placeholder {
+          color: rgb(148, 146, 146);
+        }
+
+        &:focus {
+          outline: none;
+          border: 0;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+      height: 100%;
+      overflow-y: scroll;
+
+      .activeFriends {
+        margin-bottom: 20px;
+      }
+
+      .friendList {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+
+        .active {
+          background-color: #16175259;
+          border-radius: 10px;
+        }
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 4px;
+      display: none;
+    }
+    ::-webkit-scrollbar-track {
+      background: #2d2e4259;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #555;
+
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #eeeeee;
+    }
+  }
+
+  .chatWrapper {
+    flex: 1;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+  }
+}

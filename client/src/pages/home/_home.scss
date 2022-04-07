@@ -1,0 +1,14 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000f1a;
+  color: #f1f1f1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  .homeWrapper {
+    width: 98vw;
+    height: 98vh;
+  }
+}

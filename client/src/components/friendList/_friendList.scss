@@ -1,0 +1,85 @@
+.friends {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: #16175259;
+    border-radius: 10px;
+  }
+
+  .friendAvatar {
+    margin-right: 10px;
+
+    .image {
+      height: 40px;
+      width: 40px;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 1px solid #fff;
+      }
+    }
+    .activeIcon {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: 27px;
+      bottom: 1px;
+      border-radius: 50%;
+      background-color: #3fea3f;
+      border: 1px solid #fff;
+    }
+  }
+
+  .friendName_Seen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .friendName {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      h4 {
+        font-size: 15px;
+      }
+
+      .msgTime {
+        font-size: 10px;
+        color: rgb(148, 146, 146);
+        font-weight: 600;
+      }
+    }
+    .seenUnseenIcon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .unseen,
+      .delivered {
+        color: white;
+      }
+      .seenIcon {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: yellowgreen;
+      }
+    }
+  }
+}
